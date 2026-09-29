@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "niudun-open-sdk"
+version = "1.0.0"
+description = "牛盾支付 开放支付平台 Python SDK（15 个开放接口：支付/退款/转账/分账/网关 + 回调验签 + 联调 Demo）"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+keywords = ["niudun", "payment", "sdk", "alipay", "wechat"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial",
+]
+# 唯一第三方依赖：RSA 签名（标准库不含 RSA 实现）；HTTP 走标准库 urllib
+dependencies = ["cryptography>=41"]
+
+[project.urls]
+Homepage = "https://github.com/niudunpay/niudun-pay-sdk-python"
+Repository = "https://github.com/niudunpay/niudun-pay-sdk-python"
+Gitee = "https://gitee.com/niudunpay/niudun-pay-sdk-python"
+
+[tool.setuptools.packages.find]
+include = ["niudun_open_sdk*"]
+
+# 联调 Demo 的调试页随包分发（与 Java 版把页面打进 jar 的做法一致）
+[tool.setuptools.package-data]
+"niudun_open_sdk.demo" = ["*.html"]
