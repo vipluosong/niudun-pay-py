@@ -23,9 +23,9 @@ classifiers = [
 dependencies = ["cryptography>=41"]
 
 [project.urls]
-Homepage = "https://github.com/niudunpay/niudun-pay-sdk-python"
-Repository = "https://github.com/niudunpay/niudun-pay-sdk-python"
-Gitee = "https://gitee.com/niudunpay/niudun-pay-sdk-python"
+Homepage = "https://gitee.com/qyyapp/niudun-pay-py"
+Repository = "https://gitee.com/qyyapp/niudun-pay-py"
+Gitee = "https://gitee.com/qyyapp/niudun-pay-py"
 
 [tool.setuptools.packages.find]
 include = ["niudun_open_sdk*"]

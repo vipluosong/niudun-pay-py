@@ -17,7 +17,7 @@
 ## 安装（源码引入）
 
 ```bash
-pip install git+https://github.com/niudunpay/niudun-pay-sdk-python.git
+pip install git+https://gitee.com/qyyapp/niudun-pay-py.git
 ```
 
 ```python
@@ -124,7 +124,7 @@ python -m unittest discover -s tests -t . -v
 ```
 
 黄金向量（`tests/test_golden_vector.py`）与后端签名契约同源断言，V1/V2/V3 三组向量要求签名串与
-RSA 签名值**字节级相等**（见 [`_doc/design/sdk-test-vectors.md`](https://gitee.com/niudunpay/niudun-pay)）。
+RSA 签名值**字节级相等**（见 [`_doc/design/sdk-test-vectors.md`](https://gitee.com/qyyapp)）。
 
 ## 接口文档
 
@@ -133,7 +133,7 @@ RSA 签名值**字节级相等**（见 [`_doc/design/sdk-test-vectors.md`](https
 
 ## License
 
-Apache-2.0，可自由用于商业项目与闭源集成，协议全文见 [LICENSE](LICENSE)。主仓库 [牛盾支付 Open](https://gitee.com/niudunpay/niudun-pay) 核心为 LGPL-3.0-or-later，本 SDK 作为独立仓按 Apache-2.0 单独发布。
+Apache-2.0，可自由用于商业项目与闭源集成，协议全文见 [LICENSE](LICENSE)。主仓库 [牛盾支付 Open](https://gitee.com/qyyapp) 核心为 LGPL-3.0-or-later，本 SDK 作为独立仓按 Apache-2.0 单独发布。
 
 ## 开源许可与来源
 
