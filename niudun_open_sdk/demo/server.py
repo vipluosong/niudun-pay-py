@@ -1,4 +1,4 @@
-"""牛盾支付 Python SDK 联调 Demo 服务端
+"""牛盾聚合支付 Python SDK 联调 Demo 服务端
 
 对照 `_doc/design/sdk-demo-contract.md` 第二节（demo HTTP 契约），与 Java 版
 `cn.niudun.open.sdk.demo.DemoServer` 逐字对齐路由与响应形状。
@@ -183,7 +183,7 @@ class DemoServer(ThreadingHTTPServer):
 class DemoHandler(BaseHTTPRequestHandler):
     """路由分发与各端点实现（路由顺序见 sdk-demo-contract.md §2.1）"""
 
-    server_version = "牛盾支付DemoPython/1.0"
+    server_version = "牛盾聚合支付DemoPython/1.0"
     protocol_version = "HTTP/1.1"
 
     @property
@@ -605,7 +605,7 @@ def serve(port: int = DEFAULT_PORT, host: str = "127.0.0.1") -> DemoServer:
     state = DemoState(port)
     server = DemoServer((host, port), state)
 
-    print("牛盾支付 Python SDK 联调 Demo 已启动", flush=True)
+    print("牛盾聚合支付 Python SDK 联调 Demo 已启动", flush=True)
     print(f"  调试页面 : http://{host}:{port}", flush=True)
     print(f"  平台地址 : {state.config_info()['serviceUrl']}  (商户未配置，请打开页面填写)", flush=True)
     print("  密钥状态 : 商户私钥 未配置 / 平台公钥 未配置  (可在页面「连接配置」中随时修改)", flush=True)
@@ -626,7 +626,7 @@ def main(argv: Optional[list] = None) -> None:
     """命令行入口：`python -m niudun_open_sdk.demo [--port=9794]`"""
     parser = argparse.ArgumentParser(
         prog="python -m niudun_open_sdk.demo",
-        description="牛盾支付 Python SDK 联调 Demo（调试页 + 模拟回调接收端点）",
+        description="牛盾聚合支付 Python SDK 联调 Demo（调试页 + 模拟回调接收端点）",
     )
     parser.add_argument("--port", type=int, default=DEFAULT_PORT, help=f"监听端口，默认 {DEFAULT_PORT}")
     parser.add_argument("--host", default="127.0.0.1", help="监听地址，默认 127.0.0.1（仅本机）")

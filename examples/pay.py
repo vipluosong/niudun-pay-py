@@ -1,4 +1,4 @@
-# 牛盾支付 支付下单示例 — Python
+# 牛盾聚合支付下单示例 — Python
 # 运行前：启动后端（niudun-start，端口 9999），并替换为真实商户密钥
 # 运行：python examples/pay.py
 

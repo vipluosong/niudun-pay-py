@@ -1,4 +1,4 @@
-"""牛盾支付 SDK 客户端 — 对照 sdk-contract.md 第二、十节
+"""牛盾聚合支付 SDK 客户端 — 对照 sdk-contract.md 第二、十节
 
 执行链路：填充公共参数 → 序列化 → 对 JSON 报文签名 → POST → 按原始响应体验签 → 返回 NiuDunResult。
 时间字段一律使用北京时间 `yyyy-MM-dd HH:mm:ss` 字面量（平台按报文规范字面量验签）。
@@ -87,7 +87,7 @@ class _CallbackObserver(NiuDunObserver):
 
 
 class NiuDunClient:
-    """牛盾支付 开放接口客户端
+    """牛盾聚合支付 开放接口客户端
 
     单实例可复用；配置见 [Config][niudun_open_sdk.config.Config]。
     联调场景可挂载 observer 观测每次调用的原始报文；多线程下每个调用建议使用独立实例。

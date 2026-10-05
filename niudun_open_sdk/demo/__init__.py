@@ -1,4 +1,4 @@
-"""牛盾支付 Python SDK 联调 Demo
+"""牛盾聚合支付 Python SDK 联调 Demo
 
 单命令启动的本地联调工具，所有交易调用都经 [NiuDunClient][niudun_open_sdk.client.NiuDunClient]
 走 SDK 真实调用链（签名 / 请求 / 验签），同时验证 SDK 与平台 unipay 接口两侧：

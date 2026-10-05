@@ -1,4 +1,4 @@
-"""牛盾支付 Open SDK for Python — 包根
+"""牛盾聚合支付 Open SDK for Python — 包根
 
 对齐 `_doc/design/sdk-contract.md` 第十节三件套：Config / NiuDunClient / SignUtil，
 请求与响应模型（15 个开放接口）见 [models][niudun_open_sdk.models]。

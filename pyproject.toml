@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "niudun-open-sdk"
 version = "1.0.0"
-description = "牛盾支付 开放支付平台 Python SDK（15 个开放接口：支付/退款/转账/分账/网关 + 回调验签 + 联调 Demo）"
+description = "牛盾聚合支付 开放支付平台 Python SDK（15 个开放接口：支付/退款/转账/分账/网关 + 回调验签 + 联调 Demo）"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "Apache-2.0" }
