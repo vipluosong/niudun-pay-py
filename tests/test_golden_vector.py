@@ -9,8 +9,8 @@ from __future__ import annotations
 import json
 import unittest
 
-from niudun_open_sdk.rsa import rsa_sign, rsa_verify
-from niudun_open_sdk.sign import build_sign_str
+from niudun_pay.rsa import rsa_sign, rsa_verify
+from niudun_pay.sign import build_sign_str
 from tests.vectors import ALL_VECTORS, PRIVATE_KEY, PUBLIC_KEY, V3
 
 

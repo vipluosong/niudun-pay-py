@@ -22,10 +22,10 @@ from pathlib import Path
 from typing import Any, Callable, Deque, Dict, Optional, Union
 from urllib.parse import urlsplit
 
-from niudun_open_sdk.client import NiuDunClient
-from niudun_open_sdk.config import Config
-from niudun_open_sdk.errors import NiuDunError
-from niudun_open_sdk.rsa import validate_private_key_pem, validate_public_key_pem
+from niudun_pay.client import NiuDunClient
+from niudun_pay.config import Config
+from niudun_pay.errors import NiuDunError
+from niudun_pay.rsa import validate_private_key_pem, validate_public_key_pem
 
 # 默认监听端口（五语言端口规划：go 9791 / node 9792 / php 9793 / python 9794 / java 9799）
 DEFAULT_PORT = 9794
@@ -623,9 +623,9 @@ def serve(port: int = DEFAULT_PORT, host: str = "127.0.0.1") -> DemoServer:
 
 
 def main(argv: Optional[list] = None) -> None:
-    """命令行入口：`python -m niudun_open_sdk.demo [--port=9794]`"""
+    """命令行入口：`python -m niudun_pay.demo [--port=9794]`"""
     parser = argparse.ArgumentParser(
-        prog="python -m niudun_open_sdk.demo",
+        prog="python -m niudun_pay.demo",
         description="牛盾聚合支付 Python SDK 联调 Demo（调试页 + 模拟回调接收端点）",
     )
     parser.add_argument("--port", type=int, default=DEFAULT_PORT, help=f"监听端口，默认 {DEFAULT_PORT}")

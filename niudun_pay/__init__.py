@@ -1,12 +1,12 @@
 """牛盾聚合支付 Open SDK for Python — 包根
 
 对齐 `_doc/design/sdk-contract.md` 第十节三件套：Config / NiuDunClient / SignUtil，
-请求与响应模型（15 个开放接口）见 [models][niudun_open_sdk.models]。
+请求与响应模型（15 个开放接口）见 [models][niudun_pay.models]。
 """
-from niudun_open_sdk.client import NiuDunClient, NiuDunObserver
-from niudun_open_sdk.config import Config
-from niudun_open_sdk.errors import NiuDunError, ErrorCode
-from niudun_open_sdk.models import (
+from niudun_pay.client import NiuDunClient, NiuDunObserver
+from niudun_pay.config import Config
+from niudun_pay.errors import NiuDunError, ErrorCode
+from niudun_pay.models import (
     AllocDetail,
     AllocOrderResult,
     AllocParam,
@@ -48,7 +48,7 @@ from niudun_open_sdk.models import (
     TransferSyncParam,
     TransferSyncResult,
 )
-from niudun_open_sdk.rsa import (
+from niudun_pay.rsa import (
     load_private_key,
     load_public_key,
     rsa_sign,
@@ -56,7 +56,7 @@ from niudun_open_sdk.rsa import (
     validate_private_key_pem,
     validate_public_key_pem,
 )
-from niudun_open_sdk.sign import build_sign_str
+from niudun_pay.sign import build_sign_str
 
 __version__ = "1.0.0"
 

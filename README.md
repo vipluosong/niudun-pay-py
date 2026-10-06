@@ -24,7 +24,7 @@ pip install git+https://github.com/vipluosong/niudun-pay-py.git
 ```
 
 ```python
-from niudun_open_sdk import Config, NiuDunClient, NiuDunError
+from niudun_pay import Config, NiuDunClient, NiuDunError
 ```
 
 ## 快速开始
@@ -73,8 +73,8 @@ client = NiuDunClient(config).set_observer(
 同时验证 SDK 与平台 unipay 接口两侧。HTTP 层用标准库 `http.server`，零新增运行时依赖。
 
 ```bash
-python -m niudun_open_sdk.demo             # 默认端口 9794
-python -m niudun_open_sdk.demo --port=9795 # 覆盖端口
+python -m niudun_pay.demo             # 默认端口 9794
+python -m niudun_pay.demo --port=9795 # 覆盖端口
 ```
 
 启动后打开 <http://127.0.0.1:9794> ：

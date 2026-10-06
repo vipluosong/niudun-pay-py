@@ -13,9 +13,9 @@ import uuid
 from datetime import datetime, timedelta, timezone
 from typing import Any, Callable, Dict, Optional
 
-from niudun_open_sdk.config import Config
-from niudun_open_sdk.errors import NiuDunError, ErrorCode
-from niudun_open_sdk.models import (
+from niudun_pay.config import Config
+from niudun_pay.errors import NiuDunError, ErrorCode
+from niudun_pay.models import (
     AllocParam,
     AllocQueryParam,
     AllocSyncParam,
@@ -34,8 +34,8 @@ from niudun_open_sdk.models import (
     TransferQueryParam,
     TransferSyncParam,
 )
-from niudun_open_sdk.rsa import rsa_sign, rsa_verify
-from niudun_open_sdk.sign import build_sign_str
+from niudun_pay.rsa import rsa_sign, rsa_verify
+from niudun_pay.sign import build_sign_str
 
 DEFAULT_TIMEOUT = 30000
 
@@ -49,12 +49,12 @@ def _now_beijing() -> str:
 class NiuDunObserver:
     """SDK 调用观测接口（联调/排障场景）
 
-    挂在 [NiuDunClient][niudun_open_sdk.client.NiuDunClient] 上可拿到每次调用
+    挂在 [NiuDunClient][niudun_pay.client.NiuDunClient] 上可拿到每次调用
     「签名后的完整请求体」与「平台原始响应体」，便于与后端日志逐字对照。
     不设置则零开销，不影响正常调用链。
 
     可直接继承本类覆写两个方法，也可用
-    [set_observer][niudun_open_sdk.client.NiuDunClient.set_observer] 传入两个回调函数。
+    [set_observer][niudun_pay.client.NiuDunClient.set_observer] 传入两个回调函数。
     """
 
     def on_request(self, signed_json: str) -> None:
@@ -89,7 +89,7 @@ class _CallbackObserver(NiuDunObserver):
 class NiuDunClient:
     """牛盾聚合支付 开放接口客户端
 
-    单实例可复用；配置见 [Config][niudun_open_sdk.config.Config]。
+    单实例可复用；配置见 [Config][niudun_pay.config.Config]。
     联调场景可挂载 observer 观测每次调用的原始报文；多线程下每个调用建议使用独立实例。
     """
 
@@ -278,7 +278,7 @@ class NiuDunClient:
     def signed_ping(self, param: PingParam) -> NiuDunResult:
         """签名自检探针 — POST /unipay/ping（走完整验签链路，一键判定商户号/应用/私钥/签名串是否可用）
 
-        与免签名的 [ping][niudun_open_sdk.client.NiuDunClient.ping] 互补：本方法由持商户私钥方发起，
+        与免签名的 [ping][niudun_pay.client.NiuDunClient.ping] 互补：本方法由持商户私钥方发起，
         非 0 业务码不抛异常而是原样返回，供调用方按 code 分类诊断（20052=验签失败且 msg 含服务端待签串；
         10408-10411=nonce/时钟；其余=商户号/应用类）；响应验签失败仍抛异常（平台公钥配置问题）。
         """

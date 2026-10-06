@@ -1040,10 +1040,10 @@
       if (imports.indexOf(name) < 0) { imports.push(name); }
     });
 
-    L.push('# 依赖: niudun-open-sdk（pip install niudun-open-sdk）');
+    L.push('# 依赖: niudun-pay（pip install niudun-pay）');
     L.push('# 密钥不入预览，生产环境从配置中心/环境变量读取');
     if (needsTyping) { L.push('from typing import List   # 嵌套列表标注（仅注解用）'); }
-    L.push('from niudun_open_sdk import ' + imports.join(', '));
+    L.push('from niudun_pay import ' + imports.join(', '));
     L.push('');
     L.push('config = Config(');
     L.push('    service_url="' + str(cfg.serviceUrl || '') + '",');

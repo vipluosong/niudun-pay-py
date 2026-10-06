@@ -9,7 +9,7 @@ import unittest
 
 from cryptography.hazmat.primitives import serialization
 
-from niudun_open_sdk.rsa import (
+from niudun_pay.rsa import (
     load_private_key,
     load_public_key,
     rsa_sign,

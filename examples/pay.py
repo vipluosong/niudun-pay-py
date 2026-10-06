@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from niudun_open_sdk import Config, NiuDunClient, NiuDunError  # noqa: E402
+from niudun_pay import Config, NiuDunClient, NiuDunError  # noqa: E402
 
 # 商户私钥 + 平台公钥（PEM 文本，生产环境从配置中心/环境变量读取，切勿硬编码）
 PRIVATE_KEY = """-----BEGIN PRIVATE KEY-----

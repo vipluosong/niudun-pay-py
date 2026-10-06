@@ -3,7 +3,7 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "niudun-open-sdk"
+name = "niudun-pay"
 version = "1.0.0"
 description = "牛盾聚合支付 开放支付平台 Python SDK（15 个开放接口：支付/退款/转账/分账/网关 + 回调验签 + 联调 Demo）"
 readme = "README.md"
@@ -29,8 +29,8 @@ Gitee = "https://gitee.com/qyyapp/niudun-pay-py"
 GitHub = "https://github.com/vipluosong/niudun-pay-py"
 
 [tool.setuptools.packages.find]
-include = ["niudun_open_sdk*"]
+include = ["niudun_pay*"]
 
 # 联调 Demo 的调试页随包分发（与 Java 版把页面打进 jar 的做法一致）
 [tool.setuptools.package-data]
-"niudun_open_sdk.demo" = ["*.html"]
+"niudun_pay.demo" = ["*.html"]
