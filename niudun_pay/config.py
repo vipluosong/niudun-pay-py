@@ -9,7 +9,7 @@ from typing import Optional
 class Config:
     """客户端配置
 
-    :param service_url: 网关地址（自动去尾斜杠），如 https://sandbox.niudunpay.cn
+    :param service_url: 网关地址（自动去尾斜杠），如 https://ndpay-api.qyyapp.com
     :param mch_no: 商户号
     :param private_key: 商户私钥 PEM（PKCS#8，-----BEGIN PRIVATE KEY-----）
     :param public_key: 平台公钥 PEM（X.509，-----BEGIN PUBLIC KEY-----）

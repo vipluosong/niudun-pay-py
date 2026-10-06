@@ -32,7 +32,7 @@ from niudun_pay import Config, NiuDunClient, NiuDunError
 ```python
 client = NiuDunClient(
     Config(
-        service_url="https://sandbox.niudunpay.cn",
+        service_url="https://ndpay-api.qyyapp.com",
         mch_no="M200000001",
         app_id="APP001",
         private_key=merchant_private_key_pem,   # PEM 文本（PKCS#8）
