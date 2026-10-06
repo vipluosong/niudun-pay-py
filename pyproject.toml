@@ -26,6 +26,7 @@ dependencies = ["cryptography>=41"]
 Homepage = "https://gitee.com/qyyapp/niudun-pay-py"
 Repository = "https://gitee.com/qyyapp/niudun-pay-py"
 Gitee = "https://gitee.com/qyyapp/niudun-pay-py"
+GitHub = "https://github.com/vipluosong/niudun-pay-py"
 
 [tool.setuptools.packages.find]
 include = ["niudun_open_sdk*"]

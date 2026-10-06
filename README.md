@@ -17,7 +17,10 @@
 ## 安装（源码引入）
 
 ```bash
+# Gitee（主仓）
 pip install git+https://gitee.com/qyyapp/niudun-pay-py.git
+# GitHub（镜像）
+pip install git+https://github.com/vipluosong/niudun-pay-py.git
 ```
 
 ```python
@@ -124,7 +127,7 @@ python -m unittest discover -s tests -t . -v
 ```
 
 黄金向量（`tests/test_golden_vector.py`）与后端签名契约同源断言，V1/V2/V3 三组向量要求签名串与
-RSA 签名值**字节级相等**（见 [`_doc/design/sdk-test-vectors.md`](https://gitee.com/qyyapp)）。
+RSA 签名值**字节级相等**（见 [`tests/test_golden_vector.py`](tests/test_golden_vector.py)）。
 
 ## 接口文档
 
